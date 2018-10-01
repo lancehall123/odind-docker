@@ -1,13 +1,11 @@
-<img align="left" width="150" height="150" src="https://odinblockchain.org/wp-content/uploads/2018/07/800px-black-circle-logo-with-text.png">
-
 # odind-docker
-
-[![Build Status](https://travis-ci.org/odinblockchain/odind-docker.svg?branch=master)](https://travis-ci.org/odinblockchain/odind-docker)
-[![](https://images.microbadger.com/badges/image/odinblockchain/odind-docker.svg)](https://microbadger.com/images/odinblockchain/odind-docker)
-[![Docker Pulls](https://img.shields.io/docker/pulls/odinblockchain/odind-docker.svg)](https://hub.docker.com/r/odinblockchain/odind-docker/)
 
 Easily provision [odind](https://odinblockchain.org/) using [Docker](https://www.docker.com/)
 
+## Note
+```
+Install docker ce (Community edition).
+OS is specified inside the docker file so there is no specific OS requirements.
 
 ## Quickstart from Docker Hub
 ```
@@ -27,4 +25,10 @@ docker exec odind-docker odin-cli encryptwallet "yoursecretpass"
 docker exec odind-docker odin-cli walletpassphrase "yoursecretpass" 9999999999 true
 docker exec odind-docker odin-cli getstakingstatus
 ```
-Masternode:
+## Tips
+```
+docker exec -i -t odind-docker /bin/bash - This will open a session inside the container where you can work.
+
+## Masternode:
+```
+Still to come.
