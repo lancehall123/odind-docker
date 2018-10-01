@@ -27,3 +27,4 @@ docker exec odind-docker odin-cli encryptwallet "yoursecretpass"
 docker exec odind-docker odin-cli walletpassphrase "yoursecretpass" 9999999999 true
 docker exec odind-docker odin-cli getstakingstatus
 ```
+Masternode:
