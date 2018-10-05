@@ -26,5 +26,8 @@ RUN git clone https://github.com/odinblockchain/Odin.git \
 	&& make \
 	&& make install
 
-CMD ["sh","-c","odind --daemon"]
+RUN odind --daemon
+
+CMD ["bash"]
+
 EXPOSE 22100 22101
