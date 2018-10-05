@@ -26,7 +26,7 @@ RUN git clone https://github.com/odinblockchain/Odin.git \
 	&& make \
 	&& make install
 
-ENTRYPOINT "odind --daemon" && /bin/bash
+ENTRYPOINT "odind --daemon"
 
 EXPOSE 22100 22101
 
