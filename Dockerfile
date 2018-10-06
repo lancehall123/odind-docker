@@ -7,6 +7,8 @@ LABEL maintainer="ODIN Docker Maintainers"
 RUN apt-get update
 RUN apt-get dist-upgrade -y
 
+COPY run.sh /etc/init/
+
 # Install packages
 RUN apt-get install -y build-essential software-properties-common libtool \
 	autotools-dev pkg-config libssl-dev libboost-all-dev \
@@ -26,7 +28,7 @@ RUN git clone https://github.com/odinblockchain/Odin.git \
 	&& make \
 	&& make install
 
-ENTRYPOINT "odind --daemon"
+ENTRYPOINT ["/etc/init/run.sh"]
 
 EXPOSE 22100 22101
 
